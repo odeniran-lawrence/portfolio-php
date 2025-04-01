@@ -25,7 +25,7 @@ switch ($_SERVER['REQUEST_URI']) {
         echo "Page de projects";
         break;
     case '/contact':
-        echo "Page de contact";
+        include "./templates/contact.php";
         break;
     default:
         http_response_code(404);
