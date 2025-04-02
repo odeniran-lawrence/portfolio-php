@@ -11,7 +11,9 @@
  *};
  */
 
-switch ($_SERVER['REQUEST_URI']) {
+$path = $_SERVER['REQUEST_URI'];
+
+switch ($path) {
     case '/':
         echo "Page d'accueil";
         break;
@@ -28,7 +30,6 @@ switch ($_SERVER['REQUEST_URI']) {
         include "./templates/contact.php";
         break;
     default:
-        http_response_code(404);
-        include "templates/404.php";
+        echo "Page 404, introuvable";
         break;
 }

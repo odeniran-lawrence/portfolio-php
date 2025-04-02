@@ -1,4 +1,4 @@
-echo 'Looking to send emails in production? Check out our Email API/SMTP product!'
+<!-- echo 'Looking to send emails in production? Check out our Email API/SMTP product!'
 curl \
 --ssl-reqd \
 --url 'smtp://sandbox.smtp.mailtrap.io:2525' \
@@ -26,7 +26,7 @@ curl \
         --boundary-string
         Content-Type: text/html; charset="utf-8"
         Content-Transfer-Encoding: quoted-printable
-        Content-Disposition: inline
+        Content-Disposition: inline -->
 
         <!doctype html>
         <html>
