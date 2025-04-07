@@ -1,35 +1,32 @@
 <?php
-/** 
- * le routeur est chargé d'écouter les 
+/**
+ * Le routeur est chargé d'écouter les 
  * requêtes HTTP provenant du client web 
  * puis d'y répondre avec le contenu approprié.
-*/
-
-
-/**  if($_SERVER['REQUEST_URI'] === '/'){
- *header("Location: https://www.google.com/", true, 301);
- *};
  */
-
 $path = $_SERVER['REQUEST_URI'];
 
-switch ($path) {
+$cleanPath = preg_replace('/\?.*/', '', $path);
+
+switch ($cleanPath) {
     case '/':
         echo "Page d'accueil";
         break;
+    // Filter à partir de la fin de l'URL
     case '/about':
         echo "Page de présentation";
         break;
     case '/skills':
-        echo "Page de compétences";
+        include './templates/skills.php';
         break;
     case '/projects':
-        echo "Page de projects";
+        include './templates/projects.php'; 
         break;
     case '/contact':
-        include "./templates/contact.php";
+        include './templates/contact.php';
         break;
+    
     default:
-        echo "Page 404, introuvable";
+        echo 'Page introuvable - 404 ';
         break;
 }

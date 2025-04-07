@@ -1,9 +1,9 @@
 <?php
-$requete = $_Get['res'];
-$reponse = '';
+// $requete = $_Get['res'];
+// $reponse = '';
 
-if($requete == 'Martin'){
-    $reponse = "c'est Martin";
-}
+// if($requete == 'Martin'){
+//     $reponse = "c'est Martin";
+// }
 
-echo '<br><br><h1>' .$reponse.' ! </h1>';
+// echo '<br><br><h1>' .$reponse.' ! </h1>';
